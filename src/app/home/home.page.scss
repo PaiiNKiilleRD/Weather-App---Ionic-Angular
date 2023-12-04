@@ -1,3 +1,12 @@
+ion-content {
+  --ion-background-color:#88bdbc;
+}
+.title-header {
+  margin: 15px;
+  text-align: center;
+  font-weight: 400;
+}
+
 #container {
   text-align: center;
 
@@ -17,11 +26,38 @@
   font-size: 16px;
   line-height: 22px;
 
-  color: #8c8c8c;
+  color: #eae7dc;
 
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
+}
+
+.card-container {
+  border-radius: 20px;
+  --ion-background-color: #659DBD;
+
+  span {
+    color: #eae7dc;
+    font-weight: 300;
+  }
+  #main-temp {
+    font-weight: 300;
+    font-size: 4em;
+    margin: 5px;
+  }
+  #location-icon {
+    color: #F6B844;
+  }
+  #date {
+    color: white;
+
+  }
+}
+
+ion-button {
+  width: 100%;
+  // --background;
 }
