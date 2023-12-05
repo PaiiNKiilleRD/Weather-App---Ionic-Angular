@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">gpsApp</string>
-    <string name="title_activity_main">gpsApp</string>
-    <string name="package_name">com.gpsapp.bat</string>
-    <string name="custom_url_scheme">com.gpsapp.bat</string>
-</resources>
