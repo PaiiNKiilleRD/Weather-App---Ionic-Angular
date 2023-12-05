@@ -4,20 +4,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
-    <div style="text-align: center; margin:15px;">
-        <ion-label style="font-weight: 400; font-size: 1.5em;">Pronostico Climatico</ion-label>
+<!-- TITULO -->
+    <div style="text-align: center; margin:25px 0;font-size: x-large;">
+        <ion-label style="color: #eae7dc; font-weight: 400; font-size: 1.5em; ">Pronostico Climatico</ion-label>
     </div>
 
+<!-- SI NO ACEPTAN EL PERMISO DE UBICACION NO CARGA LA CARD -->
 <div *ngIf="!loading">
     <ion-card class="card-container">
         <ion-img *ngIf="weatherTemp?.temp >= 100" src="../../assets/sunnyweather.jpg" alt="sunny"></ion-img>
         <ion-img *ngIf="weatherTemp?.temp <= 100" src="../../assets/rainyweather.jpg" alt="rainy"></ion-img>
         <ion-item lines="none">
-            <p style="font-weight: 500; color:white;">Reporte del Dia </p>
+            <p style="font-weight: 500; color:#eae7dc;">Reporte del Dia </p>
             <ion-label style="font-size: 1.3em;font-weight: bold;color: #eae7dc" id="date" slot="end">{{today | date: "EEE dd MMM" }}</ion-label>
         </ion-item>
-
+<!-- TEMPERATURA -->
         <ion-item>
             <span id="main-temp">
                 {{(weatherTemp?.temp - 273.151).toFixed(0)}}
@@ -25,7 +26,7 @@
             <span style="font-size: 1.3em;font-weight: bold;color: #d79922;margin-bottom: 25px;">°C</span>
             <img slot='end' width="180px" height="180px" [src]=weatherIcon>
         </ion-item>
-
+<!-- UBICACION -->
         <ion-item>
             <ion-icon id="location-icon" name="location"></ion-icon>
             <span class="ion-margin">{{cityName}} </span>
@@ -33,26 +34,31 @@
 
     </ion-card>         
 
+<!-- CARD TEMPERATURA DETALLADA -->
     <ion-card class="card-container">
 
-        <ion-item>
-            <span slot="start">Maxima Temperatura</span>
+<!-- REVISAR LA CLASE TEST PROBANDO LOS MARGENES DE LOS ICONOS -->
+        <ion-item class="ion-margin">
+            <img height="30px" width="30px" src="../../assets/icon/thermometer.png" alt="" class="test">
+            <span class="ion-margin test"> Maxima Temperatura</span>
             <span slot="end">{{(weatherTemp?.temp_max- 273.151).toFixed(0)}} °C</span>
         </ion-item>
 
-        <ion-item>
-            <span slot="start">Minima Temperatura</span>
+        <ion-item class="ion-margin">
+            <img height="30px" width="30px" src="../../assets/icon/low-temperature.png" alt="" class="test">
+            <span class="ion-margin test">Minima Temperatura</span>
             <span slot="end">{{(weatherTemp?.temp_min- 273.151).toFixed(0)}} °C</span>
         </ion-item>
 
-        <ion-item>
-            <span>Humedad</span>
+        <ion-item class="ion-margin">
+            <img height="30px" width="30px" src="../../assets/icon/humidity.png" alt="" class="test">
+            <span class="ion-margin test">Humedad</span>
             <span slot="end">{{weatherTemp?.humidity}} %</span>
         </ion-item>
 
     </ion-card>
 </div>
-
+<!-- LO QUE APARECERA SI NO SE ACEPTA EL PERMISO DE UBI -->
 <div *ngIf="loading">
     <h1 style="text-align: center;">Cargando Datos</h1>
 </div>

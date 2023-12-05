@@ -1,0 +1,51 @@
+
+
+* {
+    line-height: 1.4;
+    font-family: 'Roboto';
+}
+
+ion-content {
+    --ion-background-color:#88bdbc;
+}
+
+.container {
+    width: 95%;
+    margin: 49% auto;
+    border-radius: 30pt;
+    --ion-background-color: #659DBD;
+    box-shadow: inset;
+    .image {
+        width: 90%;
+        margin: 18px auto;
+        display: block;
+        img {
+            border-radius: 15pt 15pt 0 0;
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
+
+.text {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    p {
+        color: #eae7dc;
+        font-size: 1em;
+        font-weight: 300;
+    }
+
+    span {
+        color: #eae7dc;
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+}

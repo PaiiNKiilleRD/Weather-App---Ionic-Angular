@@ -5,6 +5,8 @@ import { Geolocation } from '@capacitor/geolocation';
 import { WeatherService } from '../services/weather.service';
 import { AppComponent } from '../app.component';
 
+
+
 const API_KEY = environment.API_KEY;
 const API_URL_WEATHER = environment.API_URL_WEATHER;
 const API_URL_GEO = environment.API_URL_GEO;
