@@ -1,6 +1,10 @@
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
 
+# My ignores
+
+
+# ---
 *~
 *.sw[mnpcod]
 .tmp
@@ -22,7 +26,7 @@ log.txt
 /www
 /platforms
 /plugins
-/android
+
 # Compiled output
 /dist
 /tmp

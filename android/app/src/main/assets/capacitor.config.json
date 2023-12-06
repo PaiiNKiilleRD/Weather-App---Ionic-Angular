@@ -1,0 +1,8 @@
+{
+	"appId": "com.gpsapp.bat",
+	"appName": "gpsApp",
+	"webDir": "www",
+	"server": {
+		"androidScheme": "https"
+	}
+}
